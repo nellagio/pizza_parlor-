@@ -9,12 +9,24 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
+
+
   <script>
     function validOrder() {
-      alert("the order is valid");
+      alert("The order has been recieved: calculating now!");
+    }
+    
+    function updatePrice() {
+      
+
+      var priceField = document.getElementById("totalCost");
     }
 
+
+
   </script>
+
+
   <title>Mamma Mia - PDX</title>
 </head>
 
@@ -30,11 +42,11 @@
 
     <h2>Sizes:</h2>
     <form id="orderForm" onsubmit="validOrder();">
-      <input type="radio" name="size" value="xl"> Extra Large (and in charge) (48") $45.00
-      <input type="radio" name="size" value="venti"> Venti (20") $15.00
-      <input type="radio" name="size" value="sedici"> Sedici (16") $12.00
-      <input type="radio" name="size" value="dodici"> Dodici (12") $10.00
-      <input type="radio" name="size" value="otto"> Otto (8") $6.00
+      <input type="radio" name="size" value="55"> Extra Large (and in charge) (48") $55.00
+      <input type="radio" name="size" value="15"> Venti (20") $15.00
+      <input checked type="radio" name="12" value="sedici"> Sedici (16") $12.00
+      <input type="radio" name="10" value="dodici"> Dodici (12") $10.00
+      <input type="radio" name="6" value="otto"> Otto (8") $6.00
 
       <h2>Toppings:</h2>
 
@@ -43,24 +55,28 @@
       <h5>Seven or more toppings: + $10.00 flat rate - <em>"If it fits, it ships!"</em></h5>
 
       <h3>Protiens!</h3>
-      <input type="checkbox" name="meat" value="topping">Chicken
-      <input type="checkbox" name="meat" value="topping">Pepperoni
-      <input type="checkbox" name="meat" value="topping">Sausage
-      <input type="checkbox" name="meat" value="topping">Make my meat Field Roast
+      <input type="checkbox" name="meat" value="chicken">Chicken
+      <input type="checkbox" name="meat" value="pepperoni">Pepperoni
+      <input type="checkbox" name="meat" value="sausage">Sausage
+      <input type="checkbox" name="meat" value="vegan">Make my meat Field Roast
 
       <h3>Veggies!</h3>
 
-      <input type="checkbox" name="veggie" value="topping">Onions
-      <input type="checkbox" name="veggie" value="topping">Spinach
-      <input type="checkbox" name="veggie" value="topping">Peppers
-      <input type="checkbox" name="veggie" value="topping">Olives
-      <input type="checkbox" name="veggie" value="topping">Mushrooms
-      <input type="checkbox" name="veggie" value="topping">Extra Cheese
+      <input type="checkbox" name="veggie" value="onions">Onions
+      <input type="checkbox" name="veggie" value="spinach">Spinach
+      <input type="checkbox" name="veggie" value="peppers">Peppers
+      <input type="checkbox" name="veggie" value="olives">Olives
+      <input type="checkbox" name="veggie" value="mushrooms">Mushrooms
+      <input type="checkbox" name="veggie" value="xcheese">Extra Cheese
       <input class="btn" type="submit" value="Submit" value="Calculate your pie price!">
     </form>
 
     <h6>*Please note: we will never serve you pineapples on your pizza. - <em>"Don't even think about it!"*</em></h6>
 
+    <div id="showPrice">
+      <p>The total cost of your pizza is: <span id="totalCost"></span></p>
+      <p>If you want delievery: + $6.00</p>
+      <div>
   </div>
   </div>
 </body>
