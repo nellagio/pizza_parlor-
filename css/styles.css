@@ -1,6 +1,7 @@
 body {
 background-image: url(https://i1.wp.com/www.trapperspizza.com/wp-content/uploads/2019/05/Pizza-Background.jpg?resize=1024%2C683);
-background-image: no-repeat, center;
+background-repeat: no-repeat;
+background-size: cover;
 color: white;
 }
 
@@ -9,17 +10,24 @@ color: white;
 }
 
 .container {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.8);
   color: whitesmoke;
-  border-radius: 9%;
+  border-radius: 5px;
 }
-/* .btn {
+
+.btn {
   display: flex, center;
   margin: 10px;
   padding: 20px;
-  background-color: rgb(224, 42, 42);
+  background-color: rgb(175, 175, 175);
+  color: red;
 }
 
 .btn:hover {
-  background-color: rgb(255, 0, 0);
-} */
+  background-color: rgba(134, 67, 67, 0.61);
+  color: whitesmoke
+}
+
+#orderForm input {
+display: block;
+}

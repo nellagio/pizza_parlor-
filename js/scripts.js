@@ -1,3 +1,11 @@
+$(document).ready(function () {
+
+}
+
+/*
+
+
+
 // BACKEND LOGIC
 function ScoreCard() {
   this.players = [];
@@ -100,3 +108,4 @@ $(document).ready(function () {
     reset
   });
 });
+*/
