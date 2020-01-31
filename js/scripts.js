@@ -1,7 +1,7 @@
 //front-end
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-}
+// }
 
 //backend

@@ -28,6 +28,6 @@ color: white;
   color: whitesmoke
 }
 
-#orderForm input {
-display: block;
+#orderForm label {
+  display: inline-block;
 }
