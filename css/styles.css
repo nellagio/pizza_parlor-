@@ -1,6 +1,6 @@
 body {
 background-image: url(https://i1.wp.com/www.trapperspizza.com/wp-content/uploads/2019/05/Pizza-Background.jpg?resize=1024%2C683);
-background-image: 50%;
+background-image: no-repeat, center;
 color: white;
 }
 
