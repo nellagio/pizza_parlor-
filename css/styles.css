@@ -1,0 +1,25 @@
+body {
+background-image: url(https://i1.wp.com/www.trapperspizza.com/wp-content/uploads/2019/05/Pizza-Background.jpg?resize=1024%2C683);
+background-image: 50%;
+color: white;
+}
+
+.hdr {
+ text-align: center;
+}
+
+.container {
+  background-color: red;
+  color: whitesmoke;
+  border-radius: 9%;
+}
+/* .btn {
+  display: flex, center;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(224, 42, 42);
+}
+
+.btn:hover {
+  background-color: rgb(255, 0, 0);
+} */
