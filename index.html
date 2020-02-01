@@ -10,52 +10,10 @@
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
 
-
-  <script>
-    function validOrder() {
-      alert("The order has been recieved: calculating now!");
-    }
-    
-    function updatePrice() {
-      
-      var orderForm = document.getElementById("orderForm");
-      var priceField = document.getElementById("totalCost");
-
-      var price = 0; 
-      // get size of pizza
-
-      price = price + parseInt(orderForm.size.value);
-
-      // get price of meats
-      var meatOptions = orderForm.meat;
-      for (var i = 0; i < meatOptions.length; i++) {
-        if (meatOptions[i].checked) {
-          price = price + 2;
-        } 
-      }
-      // console.log("meats: " + totalMeatCost);
-      //price += totalMeatCost;
-
-      // get price of vegtibles 
-/*
-      var totalVeggieCost = orderForm.veggie.length;
-      console.log("veggies: " + totalVeggieCost)
-      price = price + totalVeggieCost;
-*/
-    // get total price thus far
-
-      console.log(price);
-    }
-
-
-
-  </script>
-
-
   <title>Mamma Mia - PDX</title>
 </head>
 
-<body onload="updatePrice()">
+<body>
   <div class="hdr">
 
     <h1>Mamma Mia Pizzaria</h1>
@@ -66,12 +24,12 @@
   <div class="container" id="informationPanel">
 
     <h2>Sizes:</h2>
-    <form id="orderForm" onsubmit="validOrder();">
-      <input type="radio" name="size" value="55" onchange="updatePrice()"> Extra Large (and in charge) (48") $55.00
-      <input type="radio" name="size" value="15" onchange="updatePrice()"> Venti (20") $15.00
-      <input type="radio" name="size" value="12" onchange="updatePrice()" checked> Sedici (16") $12.00
-      <input type="radio" name="size" value="10" onchange="updatePrice()"> Dodici (12") $10.00
-      <input type="radio" name="size" value="6" onchange="updatePrice()"> Otto (8") $6.00
+    <form id="orderForm" onsubmit="updatePrice()">
+      <input type="radio" name="size" value="55"> Extra Large (and in charge) (48") $55.00
+      <input type="radio" name="size" value="15"> Venti (20") $15.00
+      <input type="radio" name="size" value="12" checked> Sedici (16") $12.00
+      <input type="radio" name="size" value="10"> Dodici (12") $10.00
+      <input type="radio" name="size" value="6"> Otto (8") $6.00
 
       <h2>Toppings:</h2>
 
@@ -79,49 +37,49 @@
       <h4>+ $1.00 for every veggies</h4>
 
       <h3>Protiens!</h3>
-      <input type="checkbox" id="chickenOption" name="meat" value="chicken" onchange="updatePrice()">
+      <input type="checkbox" id="chickenOption" name="meat" value="chicken">
       <label for="chickenOption">Chicken</label>
 
-      <input type="checkbox" id="pepperoniOption" name="meat" value="pepperoni" onchange="updatePrice()">
+      <input type="checkbox" id="pepperoniOption" name="meat" value="pepperoni">
       <label for="pepperoniOption"> Pepperoni</label>
 
-      <input type="checkbox" id="sausageOption" name="meat" value="sausage" onchange="updatePrice()">
+      <input type="checkbox" id="sausageOption" name="meat" value="sausage">
       <label for="sausageOption"> Sausage</label>
 
-      <input type="checkbox" id="veganOption" name="meat" value="vegan" onchange="updatePrice()">
+      <input type="checkbox" id="veganOption" name="meat" value="vegan">
       <label for="veganOption"> Make my meat Field Roast</label>
 
       <h3>Veggies!</h3>
 
-      <input type="checkbox" id="onionOption" name="veggie" value="onions" onchange="updatePrice()">
+      <input type="checkbox" id="onionOption" name="veggie" value="onions">
       <label for="onionOption"> Onions</label>
 
-      <input type="checkbox" id="spinachOption" name="veggie" value="spinach" onchange="updatePrice()">
+      <input type="checkbox" id="spinachOption" name="veggie" value="spinach">
       <label for="spinachOption">Spinach</label>
 
-      <input type="checkbox" id="pepperOption" name="veggie" value="peppers" onchange="updatePrice()">
+      <input type="checkbox" id="pepperOption" name="veggie" value="peppers">
       <label for="pepperOption">Peppers</label>
 
-      <input type="checkbox" id="oliveOption" name="veggie" value="olives" onchange="updatePrice()">
+      <input type="checkbox" id="oliveOption" name="veggie" value="olives">
       <label for="oliveOption">Olives</label>
-      
-      <input type="checkbox" id="mushroomOption" name="veggie" value="mushrooms" onchange="updatePrice()">
+
+      <input type="checkbox" id="mushroomOption" name="veggie" value="mushrooms">
       <label for="mushroomOption">Mushrooms</label>
 
-      <input type="checkbox" id="xCheeseOption" name="veggie" value="xcheese" onchange="updatePrice()">
-      <label for="xCheeseOption">Extra cheese</label>      
-      
-      <input class="btn" type="submit" value="Submit" value="Calculate your pie price!">
+      <input type="checkbox" id="xCheeseOption" name="veggie" value="xcheese">
+      <label for="xCheeseOption">Extra cheese</label>
+
+      <input class="btn" type="submit" value="Calculate your pie price!">
     </form>
 
     <h6>*Please note: we will never serve you pineapples on your pizza. - <em>"Don't even think about it!"*</em></h6>
 
     <div id="showPrice">
-      <p>The total cost of your pizza is: <span id="totalCost"></span></p>
+      <p>The total cost of your pizza is: <span id="totalCost"> </span></p>
       <p>If you want delievery: + $6.00</p>
       <div>
-  </div>
-  </div>
+      </div>
+    </div>
 </body>
 
 </html>

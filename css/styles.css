@@ -29,5 +29,10 @@ color: white;
 }
 
 #orderForm label {
-  display: inline-block;
+ margin-left: 5px;
+ margin-right: 15px;
+}
+
+#showPrice {
+  /* display: none; */
 }
